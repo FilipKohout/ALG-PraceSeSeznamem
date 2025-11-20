@@ -7,6 +7,33 @@ class Program
 
     static void Main(string[] args)
     {
+        HomePage();
+
+        bool running = true;
+        bool enteringText = false;
+        DiaryRecord? newBuffer = null;
+
+        while (running)
+        {
+            if (!enteringText)
+                CommandList();
+            Console.Write("> ");
+            string input = Console.ReadLine()?.Trim();
+            if (enteringText)
+            {
+            }
+            if (string.IsNullOrWhiteSpace(input))
+                continue;
+            switch (input.ToLower())
+            {
+            }
+        }
+    }
+
+    static void CommandList()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Příkazy: predchozi | dalsi | zacatek | konec | novy | uloz | smaz | zavri");
         Console.WriteLine("Hello, World!");
     }
 
